@@ -1,0 +1,752 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F278320A65834BC4EC4A3E8 /* Pods_HPRecordTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8ED280714A2BC4ACFAD56B9 /* Pods_HPRecordTool.framework */; };
+		651B43DD253FD20300A3968B /* HPRecordPalyerToolManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 651B43DC253FD20300A3968B /* HPRecordPalyerToolManage.m */; };
+		651B43E0253FD8DB00A3968B /* HPRecordGraphicBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 651B43DF253FD8DB00A3968B /* HPRecordGraphicBackgroundView.m */; };
+		651B44292540490E00A3968B /* HPRecordToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651B44282540490E00A3968B /* HPRecordToolViewController.m */; };
+		6552C00425369F9B007C4168 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552C00325369F9B007C4168 /* AppDelegate.m */; };
+		6552C00725369F9B007C4168 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552C00625369F9B007C4168 /* SceneDelegate.m */; };
+		6552C00A25369F9B007C4168 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552C00925369F9B007C4168 /* ViewController.m */; };
+		6552C00D25369F9B007C4168 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6552C00B25369F9B007C4168 /* Main.storyboard */; };
+		6552C00F25369F9D007C4168 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6552C00E25369F9D007C4168 /* Assets.xcassets */; };
+		6552C01225369F9D007C4168 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6552C01025369F9D007C4168 /* LaunchScreen.storyboard */; };
+		6552C01525369F9D007C4168 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552C01425369F9D007C4168 /* main.m */; };
+		6552C01F25369F9D007C4168 /* HPRecordToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552C01E25369F9D007C4168 /* HPRecordToolTests.m */; };
+		6552C02A25369F9D007C4168 /* HPRecordToolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552C02925369F9D007C4168 /* HPRecordToolUITests.m */; };
+		6552C03B2536A127007C4168 /* HPRecordToolManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552C03A2536A127007C4168 /* HPRecordToolManage.m */; };
+		6552C0402536E779007C4168 /* HPRecordCacheManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552C03F2536E779007C4168 /* HPRecordCacheManage.m */; };
+		6595DC3C254BC60900BDEC01 /* HPRecordToolViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6595DC3B254BC60900BDEC01 /* HPRecordToolViewModel.m */; };
+		65F7DD89253D3E7800A2B711 /* HPRecordGraphicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F7DD88253D3E7800A2B711 /* HPRecordGraphicView.m */; };
+		65F7DD8C253D425E00A2B711 /* HPRecordTimeAxleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F7DD8B253D425E00A2B711 /* HPRecordTimeAxleView.m */; };
+		65F7DD8F253D437700A2B711 /* HPRecordGraphicViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F7DD8E253D437700A2B711 /* HPRecordGraphicViewModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6552C01B25369F9D007C4168 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6552BFF725369F9B007C4168 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6552BFFE25369F9B007C4168;
+			remoteInfo = HPRecordTool;
+		};
+		6552C02625369F9D007C4168 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6552BFF725369F9B007C4168 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6552BFFE25369F9B007C4168;
+			remoteInfo = HPRecordTool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		651B43DB253FD20300A3968B /* HPRecordPalyerToolManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRecordPalyerToolManage.h; sourceTree = "<group>"; };
+		651B43DC253FD20300A3968B /* HPRecordPalyerToolManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPRecordPalyerToolManage.m; sourceTree = "<group>"; };
+		651B43DE253FD8DB00A3968B /* HPRecordGraphicBackgroundView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRecordGraphicBackgroundView.h; sourceTree = "<group>"; };
+		651B43DF253FD8DB00A3968B /* HPRecordGraphicBackgroundView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPRecordGraphicBackgroundView.m; sourceTree = "<group>"; };
+		651B44272540490E00A3968B /* HPRecordToolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRecordToolViewController.h; sourceTree = "<group>"; };
+		651B44282540490E00A3968B /* HPRecordToolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPRecordToolViewController.m; sourceTree = "<group>"; };
+		6552BFFF25369F9B007C4168 /* HPRecordTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HPRecordTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6552C00225369F9B007C4168 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6552C00325369F9B007C4168 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6552C00525369F9B007C4168 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		6552C00625369F9B007C4168 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		6552C00825369F9B007C4168 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6552C00925369F9B007C4168 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6552C00C25369F9B007C4168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6552C00E25369F9D007C4168 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6552C01125369F9D007C4168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6552C01325369F9D007C4168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6552C01425369F9D007C4168 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6552C01A25369F9D007C4168 /* HPRecordToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HPRecordToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6552C01E25369F9D007C4168 /* HPRecordToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPRecordToolTests.m; sourceTree = "<group>"; };
+		6552C02025369F9D007C4168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6552C02525369F9D007C4168 /* HPRecordToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HPRecordToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6552C02925369F9D007C4168 /* HPRecordToolUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPRecordToolUITests.m; sourceTree = "<group>"; };
+		6552C02B25369F9D007C4168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6552C0392536A127007C4168 /* HPRecordToolManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRecordToolManage.h; sourceTree = "<group>"; };
+		6552C03A2536A127007C4168 /* HPRecordToolManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPRecordToolManage.m; sourceTree = "<group>"; };
+		6552C03C2536E62D007C4168 /* HPRecordToolProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRecordToolProtocol.h; sourceTree = "<group>"; };
+		6552C03E2536E779007C4168 /* HPRecordCacheManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRecordCacheManage.h; sourceTree = "<group>"; };
+		6552C03F2536E779007C4168 /* HPRecordCacheManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPRecordCacheManage.m; sourceTree = "<group>"; };
+		6595DC3A254BC60900BDEC01 /* HPRecordToolViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRecordToolViewModel.h; sourceTree = "<group>"; };
+		6595DC3B254BC60900BDEC01 /* HPRecordToolViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPRecordToolViewModel.m; sourceTree = "<group>"; };
+		65F7DD87253D3E7800A2B711 /* HPRecordGraphicView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRecordGraphicView.h; sourceTree = "<group>"; };
+		65F7DD88253D3E7800A2B711 /* HPRecordGraphicView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPRecordGraphicView.m; sourceTree = "<group>"; };
+		65F7DD8A253D425E00A2B711 /* HPRecordTimeAxleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRecordTimeAxleView.h; sourceTree = "<group>"; };
+		65F7DD8B253D425E00A2B711 /* HPRecordTimeAxleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPRecordTimeAxleView.m; sourceTree = "<group>"; };
+		65F7DD8D253D437700A2B711 /* HPRecordGraphicViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRecordGraphicViewModel.h; sourceTree = "<group>"; };
+		65F7DD8E253D437700A2B711 /* HPRecordGraphicViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPRecordGraphicViewModel.m; sourceTree = "<group>"; };
+		BE30F13531BDCFA12B8F2CFC /* Pods-HPRecordTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPRecordTool.release.xcconfig"; path = "Target Support Files/Pods-HPRecordTool/Pods-HPRecordTool.release.xcconfig"; sourceTree = "<group>"; };
+		D8ED280714A2BC4ACFAD56B9 /* Pods_HPRecordTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPRecordTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9D97C1F1318C01B607054E5 /* Pods-HPRecordTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPRecordTool.debug.xcconfig"; path = "Target Support Files/Pods-HPRecordTool/Pods-HPRecordTool.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6552BFFC25369F9B007C4168 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F278320A65834BC4EC4A3E8 /* Pods_HPRecordTool.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6552C01725369F9D007C4168 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6552C02225369F9D007C4168 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		651B43DA253FD1DF00A3968B /* HPRecordPalyerTool */ = {
+			isa = PBXGroup;
+			children = (
+				651B43DB253FD20300A3968B /* HPRecordPalyerToolManage.h */,
+				651B43DC253FD20300A3968B /* HPRecordPalyerToolManage.m */,
+			);
+			path = HPRecordPalyerTool;
+			sourceTree = "<group>";
+		};
+		6552BFF625369F9B007C4168 = {
+			isa = PBXGroup;
+			children = (
+				6552C00125369F9B007C4168 /* HPRecordTool */,
+				6552C01D25369F9D007C4168 /* HPRecordToolTests */,
+				6552C02825369F9D007C4168 /* HPRecordToolUITests */,
+				6552C00025369F9B007C4168 /* Products */,
+				A73D516957544E9DC7BB7295 /* Pods */,
+				8ABA751D5662366644326CE4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6552C00025369F9B007C4168 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6552BFFF25369F9B007C4168 /* HPRecordTool.app */,
+				6552C01A25369F9D007C4168 /* HPRecordToolTests.xctest */,
+				6552C02525369F9D007C4168 /* HPRecordToolUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6552C00125369F9B007C4168 /* HPRecordTool */ = {
+			isa = PBXGroup;
+			children = (
+				6552C0372536A0C4007C4168 /* Classess */,
+				6552C00225369F9B007C4168 /* AppDelegate.h */,
+				6552C00325369F9B007C4168 /* AppDelegate.m */,
+				6552C00525369F9B007C4168 /* SceneDelegate.h */,
+				6552C00625369F9B007C4168 /* SceneDelegate.m */,
+				6552C00825369F9B007C4168 /* ViewController.h */,
+				6552C00925369F9B007C4168 /* ViewController.m */,
+				6552C00B25369F9B007C4168 /* Main.storyboard */,
+				6552C00E25369F9D007C4168 /* Assets.xcassets */,
+				6552C01025369F9D007C4168 /* LaunchScreen.storyboard */,
+				6552C01325369F9D007C4168 /* Info.plist */,
+				6552C01425369F9D007C4168 /* main.m */,
+			);
+			path = HPRecordTool;
+			sourceTree = "<group>";
+		};
+		6552C01D25369F9D007C4168 /* HPRecordToolTests */ = {
+			isa = PBXGroup;
+			children = (
+				6552C01E25369F9D007C4168 /* HPRecordToolTests.m */,
+				6552C02025369F9D007C4168 /* Info.plist */,
+			);
+			path = HPRecordToolTests;
+			sourceTree = "<group>";
+		};
+		6552C02825369F9D007C4168 /* HPRecordToolUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6552C02925369F9D007C4168 /* HPRecordToolUITests.m */,
+				6552C02B25369F9D007C4168 /* Info.plist */,
+			);
+			path = HPRecordToolUITests;
+			sourceTree = "<group>";
+		};
+		6552C0372536A0C4007C4168 /* Classess */ = {
+			isa = PBXGroup;
+			children = (
+				651B43DA253FD1DF00A3968B /* HPRecordPalyerTool */,
+				65F7DD86253D392500A2B711 /* HPRecordGraphic */,
+				6552C0382536A101007C4168 /* HPRecordTool */,
+				651B44272540490E00A3968B /* HPRecordToolViewController.h */,
+				651B44282540490E00A3968B /* HPRecordToolViewController.m */,
+				6595DC3A254BC60900BDEC01 /* HPRecordToolViewModel.h */,
+				6595DC3B254BC60900BDEC01 /* HPRecordToolViewModel.m */,
+			);
+			path = Classess;
+			sourceTree = "<group>";
+		};
+		6552C0382536A101007C4168 /* HPRecordTool */ = {
+			isa = PBXGroup;
+			children = (
+				6552C03D2536E74F007C4168 /* CacheManage */,
+				6552C0392536A127007C4168 /* HPRecordToolManage.h */,
+				6552C03A2536A127007C4168 /* HPRecordToolManage.m */,
+				6552C03C2536E62D007C4168 /* HPRecordToolProtocol.h */,
+			);
+			path = HPRecordTool;
+			sourceTree = "<group>";
+		};
+		6552C03D2536E74F007C4168 /* CacheManage */ = {
+			isa = PBXGroup;
+			children = (
+				6552C03E2536E779007C4168 /* HPRecordCacheManage.h */,
+				6552C03F2536E779007C4168 /* HPRecordCacheManage.m */,
+			);
+			path = CacheManage;
+			sourceTree = "<group>";
+		};
+		65F7DD86253D392500A2B711 /* HPRecordGraphic */ = {
+			isa = PBXGroup;
+			children = (
+				65F7DD87253D3E7800A2B711 /* HPRecordGraphicView.h */,
+				65F7DD88253D3E7800A2B711 /* HPRecordGraphicView.m */,
+				651B43DE253FD8DB00A3968B /* HPRecordGraphicBackgroundView.h */,
+				651B43DF253FD8DB00A3968B /* HPRecordGraphicBackgroundView.m */,
+				65F7DD8A253D425E00A2B711 /* HPRecordTimeAxleView.h */,
+				65F7DD8B253D425E00A2B711 /* HPRecordTimeAxleView.m */,
+				65F7DD8D253D437700A2B711 /* HPRecordGraphicViewModel.h */,
+				65F7DD8E253D437700A2B711 /* HPRecordGraphicViewModel.m */,
+			);
+			path = HPRecordGraphic;
+			sourceTree = "<group>";
+		};
+		8ABA751D5662366644326CE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8ED280714A2BC4ACFAD56B9 /* Pods_HPRecordTool.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A73D516957544E9DC7BB7295 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9D97C1F1318C01B607054E5 /* Pods-HPRecordTool.debug.xcconfig */,
+				BE30F13531BDCFA12B8F2CFC /* Pods-HPRecordTool.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6552BFFE25369F9B007C4168 /* HPRecordTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6552C02E25369F9D007C4168 /* Build configuration list for PBXNativeTarget "HPRecordTool" */;
+			buildPhases = (
+				39635F77C653D7576813BC31 /* [CP] Check Pods Manifest.lock */,
+				6552BFFB25369F9B007C4168 /* Sources */,
+				6552BFFC25369F9B007C4168 /* Frameworks */,
+				6552BFFD25369F9B007C4168 /* Resources */,
+				892133B61BBAD3D43992F4FA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HPRecordTool;
+			productName = HPRecordTool;
+			productReference = 6552BFFF25369F9B007C4168 /* HPRecordTool.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6552C01925369F9D007C4168 /* HPRecordToolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6552C03125369F9D007C4168 /* Build configuration list for PBXNativeTarget "HPRecordToolTests" */;
+			buildPhases = (
+				6552C01625369F9D007C4168 /* Sources */,
+				6552C01725369F9D007C4168 /* Frameworks */,
+				6552C01825369F9D007C4168 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6552C01C25369F9D007C4168 /* PBXTargetDependency */,
+			);
+			name = HPRecordToolTests;
+			productName = HPRecordToolTests;
+			productReference = 6552C01A25369F9D007C4168 /* HPRecordToolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6552C02425369F9D007C4168 /* HPRecordToolUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6552C03425369F9D007C4168 /* Build configuration list for PBXNativeTarget "HPRecordToolUITests" */;
+			buildPhases = (
+				6552C02125369F9D007C4168 /* Sources */,
+				6552C02225369F9D007C4168 /* Frameworks */,
+				6552C02325369F9D007C4168 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6552C02725369F9D007C4168 /* PBXTargetDependency */,
+			);
+			name = HPRecordToolUITests;
+			productName = HPRecordToolUITests;
+			productReference = 6552C02525369F9D007C4168 /* HPRecordToolUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6552BFF725369F9B007C4168 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "何鹏";
+				TargetAttributes = {
+					6552BFFE25369F9B007C4168 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					6552C01925369F9D007C4168 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 6552BFFE25369F9B007C4168;
+					};
+					6552C02425369F9D007C4168 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 6552BFFE25369F9B007C4168;
+					};
+				};
+			};
+			buildConfigurationList = 6552BFFA25369F9B007C4168 /* Build configuration list for PBXProject "HPRecordTool" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6552BFF625369F9B007C4168;
+			productRefGroup = 6552C00025369F9B007C4168 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6552BFFE25369F9B007C4168 /* HPRecordTool */,
+				6552C01925369F9D007C4168 /* HPRecordToolTests */,
+				6552C02425369F9D007C4168 /* HPRecordToolUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6552BFFD25369F9B007C4168 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6552C01225369F9D007C4168 /* LaunchScreen.storyboard in Resources */,
+				6552C00F25369F9D007C4168 /* Assets.xcassets in Resources */,
+				6552C00D25369F9B007C4168 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6552C01825369F9D007C4168 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6552C02325369F9D007C4168 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		39635F77C653D7576813BC31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HPRecordTool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		892133B61BBAD3D43992F4FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HPRecordTool/Pods-HPRecordTool-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HPRecordTool/Pods-HPRecordTool-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HPRecordTool/Pods-HPRecordTool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6552BFFB25369F9B007C4168 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6552C00A25369F9B007C4168 /* ViewController.m in Sources */,
+				6552C03B2536A127007C4168 /* HPRecordToolManage.m in Sources */,
+				6552C0402536E779007C4168 /* HPRecordCacheManage.m in Sources */,
+				6552C00425369F9B007C4168 /* AppDelegate.m in Sources */,
+				65F7DD8F253D437700A2B711 /* HPRecordGraphicViewModel.m in Sources */,
+				65F7DD8C253D425E00A2B711 /* HPRecordTimeAxleView.m in Sources */,
+				65F7DD89253D3E7800A2B711 /* HPRecordGraphicView.m in Sources */,
+				6595DC3C254BC60900BDEC01 /* HPRecordToolViewModel.m in Sources */,
+				651B44292540490E00A3968B /* HPRecordToolViewController.m in Sources */,
+				6552C01525369F9D007C4168 /* main.m in Sources */,
+				651B43DD253FD20300A3968B /* HPRecordPalyerToolManage.m in Sources */,
+				651B43E0253FD8DB00A3968B /* HPRecordGraphicBackgroundView.m in Sources */,
+				6552C00725369F9B007C4168 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6552C01625369F9D007C4168 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6552C01F25369F9D007C4168 /* HPRecordToolTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6552C02125369F9D007C4168 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6552C02A25369F9D007C4168 /* HPRecordToolUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6552C01C25369F9D007C4168 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6552BFFE25369F9B007C4168 /* HPRecordTool */;
+			targetProxy = 6552C01B25369F9D007C4168 /* PBXContainerItemProxy */;
+		};
+		6552C02725369F9D007C4168 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6552BFFE25369F9B007C4168 /* HPRecordTool */;
+			targetProxy = 6552C02625369F9D007C4168 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6552C00B25369F9B007C4168 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6552C00C25369F9B007C4168 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6552C01025369F9D007C4168 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6552C01125369F9D007C4168 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6552C02C25369F9D007C4168 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6552C02D25369F9D007C4168 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6552C02F25369F9D007C4168 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9D97C1F1318C01B607054E5 /* Pods-HPRecordTool.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46NEYMBVT5;
+				INFOPLIST_FILE = HPRecordTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HPRecordTool2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6552C03025369F9D007C4168 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE30F13531BDCFA12B8F2CFC /* Pods-HPRecordTool.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52293RKLWK;
+				INFOPLIST_FILE = HPRecordTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HPRecordTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6552C03225369F9D007C4168 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HPRecordToolTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HPRecordToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HPRecordTool.app/HPRecordTool";
+			};
+			name = Debug;
+		};
+		6552C03325369F9D007C4168 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HPRecordToolTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HPRecordToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HPRecordTool.app/HPRecordTool";
+			};
+			name = Release;
+		};
+		6552C03525369F9D007C4168 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HPRecordToolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HPRecordToolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HPRecordTool;
+			};
+			name = Debug;
+		};
+		6552C03625369F9D007C4168 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HPRecordToolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HPRecordToolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HPRecordTool;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6552BFFA25369F9B007C4168 /* Build configuration list for PBXProject "HPRecordTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6552C02C25369F9D007C4168 /* Debug */,
+				6552C02D25369F9D007C4168 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6552C02E25369F9D007C4168 /* Build configuration list for PBXNativeTarget "HPRecordTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6552C02F25369F9D007C4168 /* Debug */,
+				6552C03025369F9D007C4168 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6552C03125369F9D007C4168 /* Build configuration list for PBXNativeTarget "HPRecordToolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6552C03225369F9D007C4168 /* Debug */,
+				6552C03325369F9D007C4168 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6552C03425369F9D007C4168 /* Build configuration list for PBXNativeTarget "HPRecordToolUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6552C03525369F9D007C4168 /* Debug */,
+				6552C03625369F9D007C4168 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6552BFF725369F9B007C4168 /* Project object */;
+}
