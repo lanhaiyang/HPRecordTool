@@ -5,5 +5,5 @@
 
 |图片|视频|
 |:--:|:--:|
-|![图片](https://github.com/lanhaiyang/HPRecordTool/blob/main/README/video1.mp4)|![视频](https://github.com/lanhaiyang/HPRecordTool/blob/main/README/video1.mp4)|
+|![图片](https://github.com/lanhaiyang/HPRecordTool/blob/main/README/2.png)|![视频](https://github.com/lanhaiyang/HPRecordTool/blob/main/README/video1.mp4)|
 
