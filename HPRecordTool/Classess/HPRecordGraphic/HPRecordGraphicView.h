@@ -29,7 +29,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)defalueNumber;
 
-- (NSString *)dateFormSeconds:(NSInteger)totalSeconds;
 
 
 @end

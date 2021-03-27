@@ -273,6 +273,36 @@
 
 -(void)recordAction{
     
+    
+    if(_viewModel.isAcitonPlayer == YES){
+        
+        [self playeEven];
+    }else{
+        
+        [self recordEvent];
+    }
+    
+    _viewModel.isAcitonPlayer = NO;
+}
+
+-(void)playeEven{
+    
+    [_graphicView hp_setRecordSizes:_viewModel.recordMaxs];
+    [_playerToolManage stop];
+    _record.userInteractionEnabled = YES;
+    [_record setTitle:@"录音" forState:UIControlStateNormal];
+    [_record setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    
+    [_testPlayer setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    _testPlayer.userInteractionEnabled = YES;
+    [_testPlayer setTitle:@"试听" forState:UIControlStateNormal];
+    
+    _reset.userInteractionEnabled = YES;
+    [_reset setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+}
+
+-(void)recordEvent{
+    
     //录音->录音成功->马克风正在录音
     if (_recordToolManage.isRecorder == YES) {
             
@@ -306,7 +336,6 @@
 
     }
     
-    _viewModel.isAcitonPlayer = NO;
 }
 
 
@@ -314,7 +343,6 @@
 -(void)testPlayerAction{
     
     //试听
-//    [_recordToolManage stopRecord];
     
     if (_viewModel.isAcitonPlayer == NO) {
         // 切换播放状态
@@ -322,9 +350,9 @@
         _viewModel.isAcitonPlayer = YES;
         
         // 这是录音键不能交互
-        _record.userInteractionEnabled = NO;
-        [_record setTitle:@"录音" forState:UIControlStateNormal];
-        [_record setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        _record.userInteractionEnabled = YES;
+        [_record setTitle:@"暂停" forState:UIControlStateNormal];
+        [_record setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
         
         
         [_testPlayer setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];

@@ -81,6 +81,12 @@
     if (self.graphicBackgroundView.contentOffsetX > _viewW + self.graphicBackgroundView.centerOffset) {
      
         self.timeListView.contentOffset = CGPointMake(self.graphicBackgroundView.contentOffsetX - _viewW - self.graphicBackgroundView.centerOffset , 0);
+        
+        CGFloat x = _viewW + self.graphicBackgroundView.centerOffset;
+        CGFloat y = _axleView.frame.origin.y;
+        CGFloat w = _axleView.frame.size.width;
+        CGFloat h = _axleView.frame.size.height;
+        _axleView.frame = CGRectMake(x, y, w, h);
     }else{
         
         CGFloat x = self.graphicBackgroundView.contentOffsetX;
@@ -148,6 +154,9 @@
     
     if (_timeListView == nil) {
         _timeListView = [[UIScrollView alloc] init];
+        _timeListView.userInteractionEnabled = NO;
+        _timeListView.showsHorizontalScrollIndicator = NO;
+        _timeListView.showsVerticalScrollIndicator = NO;
     }
     return _timeListView;
 }
