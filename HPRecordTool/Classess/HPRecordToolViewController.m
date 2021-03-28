@@ -143,12 +143,13 @@
             break;
         case HPRecordPalyerToolPlayer:{
             
-            
-            [self setTimeContentWithLeftSecondTime:_playerToolManage.currentTime rightSecondTime:_graphicView.recordMaxSecond];
-            _viewModel.isAcitonPlayer = YES;
-            [_graphicView hp_PlayerWihtDuration:_playerToolManage.currentTime moreSpace:_graphicView.secondSpace];
-            if (_playerToolManage.currentTime >= _graphicView.recordMaxSecond) {
+            if (_playerToolManage.currentTime >= _recordToolManage.currentTime) {//播放到当前录制时间
                 [_playerToolManage stop];
+                _viewModel.isAcitonPlayer = NO;
+            }else{
+                [self setTimeContentWithLeftSecondTime:_playerToolManage.currentTime rightSecondTime:_graphicView.recordMaxSecond];
+                _viewModel.isAcitonPlayer = YES;
+                [_graphicView hp_PlayerWihtDuration:_playerToolManage.currentTime moreSpace:_graphicView.secondSpace];
             }
         }
             break;
@@ -442,7 +443,7 @@
     
     if (_graphicView == nil) {
         _graphicView = [[HPRecordGraphicView alloc] init];
-        _graphicView.recordMaxSecond = 60;
+        _graphicView.recordMaxSecond = 10;
         [self setTimeContentWithLeftSecondTime:0 rightSecondTime:_graphicView.recordMaxSecond];
         [_graphicView graphicUpdate];
     }
