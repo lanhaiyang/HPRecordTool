@@ -258,6 +258,7 @@
     [_graphicView hp_setRecordSizes:_viewModel.recordMaxs];
     [_graphicView hp_offsetXWithZero];
     [_graphicView graphicUpdate];
+    [self setTimeContentWithLeftSecondTime:0 rightSecondTime:_graphicView.recordMaxSecond];
     
     _record.userInteractionEnabled = YES;
     [_record setTitle:@"录音" forState:UIControlStateNormal];
@@ -354,7 +355,7 @@
         [_record setTitle:@"暂停" forState:UIControlStateNormal];
         [_record setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
         
-        
+        _testPlayer.userInteractionEnabled = NO;
         [_testPlayer setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_testPlayer setTitle:@"正在播放" forState:UIControlStateNormal];
         

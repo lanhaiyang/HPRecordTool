@@ -78,9 +78,10 @@
     
     [self.graphicBackgroundView hp_setRecordSizes:recordSizes];
     
-    if (self.graphicBackgroundView.contentOffsetX > _viewW + self.graphicBackgroundView.centerOffset) {
+    CGFloat offset = recordSizes.count * (_graphicBackgroundView.microsesecondSpace + _graphicBackgroundView.rectangleSpace);
+    if (offset > _viewW + self.graphicBackgroundView.centerOffset) {
      
-        self.timeListView.contentOffset = CGPointMake(self.graphicBackgroundView.contentOffsetX - _viewW - self.graphicBackgroundView.centerOffset , 0);
+        self.timeListView.contentOffset = CGPointMake(offset - _viewW - self.graphicBackgroundView.centerOffset , 0);
         
         CGFloat x = _viewW + self.graphicBackgroundView.centerOffset;
         CGFloat y = _axleView.frame.origin.y;
@@ -89,7 +90,7 @@
         _axleView.frame = CGRectMake(x, y, w, h);
     }else{
         
-        CGFloat x = self.graphicBackgroundView.contentOffsetX;
+        CGFloat x = offset;
         CGFloat y = _axleView.frame.origin.y;
         CGFloat w = _axleView.frame.size.width;
         CGFloat h = _axleView.frame.size.height;
@@ -118,7 +119,12 @@
     if (duration * moreSpace >= _viewW + self.graphicBackgroundView.centerOffset) {
     
         self.timeListView.contentOffset = CGPointMake((duration - _duration) * moreSpace, 0);
-
+        
+        CGFloat x = _viewW + self.graphicBackgroundView.centerOffset;
+        CGFloat y = _axleView.frame.origin.y;
+        CGFloat w = _axleView.frame.size.width;
+        CGFloat h = _axleView.frame.size.height;
+        _axleView.frame = CGRectMake(x, y, w, h);
     }else{
         
         _duration = duration;
