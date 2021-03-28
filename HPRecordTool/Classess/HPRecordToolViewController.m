@@ -293,7 +293,7 @@
     [_record setTitle:@"录音" forState:UIControlStateNormal];
     [_record setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     
-    [_testPlayer setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    [_testPlayer setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     _testPlayer.userInteractionEnabled = YES;
     [_testPlayer setTitle:@"试听" forState:UIControlStateNormal];
     
@@ -441,7 +441,7 @@
     
     if (_graphicView == nil) {
         _graphicView = [[HPRecordGraphicView alloc] init];
-        _graphicView.recordMaxSecond = 10;
+        _graphicView.recordMaxSecond = 60;
         [self setTimeContentWithLeftSecondTime:0 rightSecondTime:_graphicView.recordMaxSecond];
         [_graphicView graphicUpdate];
     }
