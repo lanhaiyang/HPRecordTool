@@ -22,6 +22,7 @@
 		6552C02A25369F9D007C4168 /* HPRecordToolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552C02925369F9D007C4168 /* HPRecordToolUITests.m */; };
 		6552C03B2536A127007C4168 /* HPRecordToolManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552C03A2536A127007C4168 /* HPRecordToolManage.m */; };
 		6552C0402536E779007C4168 /* HPRecordCacheManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6552C03F2536E779007C4168 /* HPRecordCacheManage.m */; };
+		6592271C2611FFA800BA67C2 /* HPRepetitionActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6592271B2611FFA800BA67C2 /* HPRepetitionActionButton.m */; };
 		6595DC3C254BC60900BDEC01 /* HPRecordToolViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6595DC3B254BC60900BDEC01 /* HPRecordToolViewModel.m */; };
 		65F7DD89253D3E7800A2B711 /* HPRecordGraphicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F7DD88253D3E7800A2B711 /* HPRecordGraphicView.m */; };
 		65F7DD8C253D425E00A2B711 /* HPRecordTimeAxleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F7DD8B253D425E00A2B711 /* HPRecordTimeAxleView.m */; };
@@ -75,6 +76,8 @@
 		6552C03C2536E62D007C4168 /* HPRecordToolProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRecordToolProtocol.h; sourceTree = "<group>"; };
 		6552C03E2536E779007C4168 /* HPRecordCacheManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRecordCacheManage.h; sourceTree = "<group>"; };
 		6552C03F2536E779007C4168 /* HPRecordCacheManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPRecordCacheManage.m; sourceTree = "<group>"; };
+		6592271A2611FFA800BA67C2 /* HPRepetitionActionButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRepetitionActionButton.h; sourceTree = "<group>"; };
+		6592271B2611FFA800BA67C2 /* HPRepetitionActionButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPRepetitionActionButton.m; sourceTree = "<group>"; };
 		6595DC3A254BC60900BDEC01 /* HPRecordToolViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRecordToolViewModel.h; sourceTree = "<group>"; };
 		6595DC3B254BC60900BDEC01 /* HPRecordToolViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPRecordToolViewModel.m; sourceTree = "<group>"; };
 		65F7DD87253D3E7800A2B711 /* HPRecordGraphicView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRecordGraphicView.h; sourceTree = "<group>"; };
@@ -185,6 +188,7 @@
 		6552C0372536A0C4007C4168 /* Classess */ = {
 			isa = PBXGroup;
 			children = (
+				659227192611FF2B00BA67C2 /* HPRepetitionActionButton */,
 				651B43DA253FD1DF00A3968B /* HPRecordPalyerTool */,
 				65F7DD86253D392500A2B711 /* HPRecordGraphic */,
 				6552C0382536A101007C4168 /* HPRecordTool */,
@@ -214,6 +218,15 @@
 				6552C03F2536E779007C4168 /* HPRecordCacheManage.m */,
 			);
 			path = CacheManage;
+			sourceTree = "<group>";
+		};
+		659227192611FF2B00BA67C2 /* HPRepetitionActionButton */ = {
+			isa = PBXGroup;
+			children = (
+				6592271A2611FFA800BA67C2 /* HPRepetitionActionButton.h */,
+				6592271B2611FFA800BA67C2 /* HPRepetitionActionButton.m */,
+			);
+			path = HPRepetitionActionButton;
 			sourceTree = "<group>";
 		};
 		65F7DD86253D392500A2B711 /* HPRecordGraphic */ = {
@@ -428,6 +441,7 @@
 				6552C00425369F9B007C4168 /* AppDelegate.m in Sources */,
 				65F7DD8F253D437700A2B711 /* HPRecordGraphicViewModel.m in Sources */,
 				65F7DD8C253D425E00A2B711 /* HPRecordTimeAxleView.m in Sources */,
+				6592271C2611FFA800BA67C2 /* HPRepetitionActionButton.m in Sources */,
 				65F7DD89253D3E7800A2B711 /* HPRecordGraphicView.m in Sources */,
 				6595DC3C254BC60900BDEC01 /* HPRecordToolViewModel.m in Sources */,
 				651B44292540490E00A3968B /* HPRecordToolViewController.m in Sources */,

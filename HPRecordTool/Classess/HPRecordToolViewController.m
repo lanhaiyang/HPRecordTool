@@ -13,8 +13,9 @@
 #import "HPRecordToolViewModel.h"
 #import <Masonry/Masonry.h>
 #import "HPRecordGraphicViewModel.h"
+#import "HPRepetitionActionButton.h"
 
-@interface HPRecordToolViewController ()<HPRecordPalyerToolDelegate,HPRecordToolProtocol>
+@interface HPRecordToolViewController ()<HPRecordPalyerToolDelegate,HPRecordToolProtocol,HPRepetitionActionDelegate>
 
 @property(nonatomic,strong) HPRecordToolManage *recordToolManage;
 @property(nonatomic,strong) HPRecordGraphicView *graphicView;
@@ -23,7 +24,7 @@
 
 @property(nonatomic,strong) UILabel *time;//显示时间
 @property(nonatomic,strong) UIButton *reset;//重置
-@property(nonatomic,strong) UIButton *record;//录音
+@property(nonatomic,strong) HPRepetitionActionButton *record;//录音
 @property(nonatomic,strong) UIButton *testPlayer;//试听
 
 @end
@@ -190,7 +191,8 @@
             break;
         case HPRecordToolRecordCompoundFailse:{
             
-
+            
+            _record.userInteractionEnabled = YES;
             [_testPlayer setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
             _testPlayer.userInteractionEnabled = NO;
             [_testPlayer setTitle:@"不能试听" forState:UIControlStateNormal];
@@ -198,6 +200,7 @@
             break;
         case HPRecordToolRecordCompoundSuccess:{
             
+            _record.userInteractionEnabled = YES;
             [_testPlayer setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             _testPlayer.userInteractionEnabled = YES;
             [_testPlayer setTitle:@"试听" forState:UIControlStateNormal];
@@ -273,7 +276,7 @@
     [_reset setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
 }
 
--(void)recordAction{
+-(void)repetitionAction{
     
     
     if(_viewModel.isAcitonPlayer == YES){
@@ -307,7 +310,9 @@
     
     //录音->录音成功->马克风正在录音
     if (_recordToolManage.isRecorder == YES) {
-            
+        
+        _record.closeRepetition = NO;
+        _record.userInteractionEnabled = NO;// 等待录音合成，合成后才能交互
         [_recordToolManage pauseRecord];
         [_record setTitle:@"录音" forState:UIControlStateNormal];
         [_record setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
@@ -325,6 +330,7 @@
                 
             [_recordToolManage startRecord];
             
+            _record.closeRepetition = YES;//恢复正常点击
             [_record setTitle:@"暂停" forState:UIControlStateNormal];
             [_record setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
             
@@ -375,6 +381,7 @@
         [_record setTitle:@"录音" forState:UIControlStateNormal];
         [_record setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         
+        _testPlayer.userInteractionEnabled = YES;
         [_testPlayer setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_testPlayer setTitle:@"试听" forState:UIControlStateNormal];
         
@@ -391,15 +398,17 @@
 
 #pragma mark - 懒加载
 
--(UIButton *)record{
+-(HPRepetitionActionButton *)record{
     
     if (_record == nil) {
-        _record = [[UIButton alloc] init];
+        _record = [[HPRepetitionActionButton alloc] init];
+        _record.delegate = self;
+        _record.closeRepetition = NO;
         [_record setTitle:@"录音" forState:UIControlStateNormal];
         [_record setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         _record.titleLabel.textAlignment = NSTextAlignmentCenter;
         
-        [_record addTarget:self action:@selector(recordAction) forControlEvents:UIControlEventTouchUpInside];
+//        [_record addTarget:self action:@selector(recordAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _record;
 }
