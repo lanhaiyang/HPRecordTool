@@ -54,7 +54,16 @@
     
     _graphicViewModel.axleViewH = self.bounds.size.height -
     _graphicViewModel.axleViewY;
-    self.axleView.frame = CGRectMake(0, _graphicViewModel.axleViewY, _graphicViewModel.axleViewW, _graphicViewModel.axleViewH);
+ 
+    if (_isZeroStart == YES) {
+        
+        CGFloat w = _graphicViewModel.axleViewW;
+        CGFloat x = _graphicBackgroundView.firstRectangX - w/2;
+        self.axleView.frame = CGRectMake(x, _graphicViewModel.axleViewY, w, _graphicViewModel.axleViewH);
+    }else{
+        
+        self.axleView.frame = CGRectMake(0, _graphicViewModel.axleViewY, _graphicViewModel.axleViewW, _graphicViewModel.axleViewH);
+    }
 }
 
 -(void)graphicUpdate{
@@ -71,6 +80,8 @@
 -(void)recordGraphicUpdate{
     
     self.timeListView.contentSize = CGSizeMake(_graphicViewModel.graphicW + self.bounds.size.width/2  - _graphicBackgroundView.centerOffset, 0);
+    
+
 }
 
 
@@ -78,7 +89,13 @@
     
     [self.graphicBackgroundView hp_setRecordSizes:recordSizes];
     
-    CGFloat offset = recordSizes.count * (_graphicBackgroundView.microsesecondSpace + _graphicBackgroundView.rectangleSpace);
+    CGFloat offset = 0;
+    if (_isZeroStart == YES) {
+        
+        offset = recordSizes.count * (_graphicBackgroundView.microsesecondSpace + _graphicBackgroundView.rectangleSpace) + _graphicBackgroundView.firstRectangX;
+    }else{
+        offset = recordSizes.count * (_graphicBackgroundView.microsesecondSpace + _graphicBackgroundView.rectangleSpace);
+    }
     if (offset > _viewW + self.graphicBackgroundView.centerOffset) {
      
         self.timeListView.contentOffset = CGPointMake(offset - _viewW - self.graphicBackgroundView.centerOffset , 0);
@@ -140,6 +157,22 @@
 
 #pragma mark - 懒加载
 
+-(void)setGraphicDirect:(HPRecordGraphicRectDirect)graphicDirect{
+    
+    _graphicDirect = graphicDirect;
+    _graphicBackgroundView.graphicDirect = graphicDirect;
+}
+
+-(void)setIsZeroStart:(BOOL)isZeroStart{
+    
+    _isZeroStart = isZeroStart;
+    _graphicBackgroundView.isZeroStart = isZeroStart;
+    [_graphicBackgroundView hp_updateDisplay];
+    
+
+
+}
+
 -(CGFloat)secondSpace{
     
     return _graphicViewModel.secondSpace;
@@ -175,7 +208,9 @@
 //        _graphicBackgroundView.recordMaxSecond = 60;
         _graphicBackgroundView.rectangleSpace = 2;
         _graphicBackgroundView.delegate = self;
-//        [_graphicBackgroundView hp_setRecordSizes:@[@(0.1),@(0.1),@(0.1),@(0.1),@(0.1),@(0.1),@(0.1),@(0.1),@(0.1),@(0.1),@(0.1),@(0.1),@(0.1)]];
+//        _graphicBackgroundView.textColor = [UIColor greenColor];
+//        _graphicBackgroundView.lineColor = [UIColor yellowColor];
+//        _graphicBackgroundView.rectangleColor = [UIColor blueColor];
     }
     return _graphicBackgroundView;
 }

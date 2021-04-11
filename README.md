@@ -3,7 +3,7 @@
 
 模仿"茉莉App"录音功能
 
-|图片|视频|
-|:--:|:--:|
-|![图片](https://github.com/lanhaiyang/HPRecordTool/blob/main/README/2.png)|![视频](https://github.com/lanhaiyang/HPRecordTool/blob/main/README/video1.mp4)|
+|头部显示|底部显示|居中显示|视频|
+|:--:|:--:|:--:|:--:|
+||||![图片](https://github.com/lanhaiyang/HPRecordTool/blob/main/README/2.png)|![视频](https://github.com/lanhaiyang/HPRecordTool/blob/main/README/video1.mp4)|
 

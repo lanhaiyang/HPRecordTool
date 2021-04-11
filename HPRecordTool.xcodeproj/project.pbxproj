@@ -47,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6511846626231E810046075A /* HPRecordGraphicBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRecordGraphicBase.h; sourceTree = "<group>"; };
 		651B43DB253FD20300A3968B /* HPRecordPalyerToolManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRecordPalyerToolManage.h; sourceTree = "<group>"; };
 		651B43DC253FD20300A3968B /* HPRecordPalyerToolManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPRecordPalyerToolManage.m; sourceTree = "<group>"; };
 		651B43DE253FD8DB00A3968B /* HPRecordGraphicBackgroundView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRecordGraphicBackgroundView.h; sourceTree = "<group>"; };
@@ -232,6 +233,7 @@
 		65F7DD86253D392500A2B711 /* HPRecordGraphic */ = {
 			isa = PBXGroup;
 			children = (
+				6511846626231E810046075A /* HPRecordGraphicBase.h */,
 				65F7DD87253D3E7800A2B711 /* HPRecordGraphicView.h */,
 				65F7DD88253D3E7800A2B711 /* HPRecordGraphicView.m */,
 				651B43DE253FD8DB00A3968B /* HPRecordGraphicBackgroundView.h */,

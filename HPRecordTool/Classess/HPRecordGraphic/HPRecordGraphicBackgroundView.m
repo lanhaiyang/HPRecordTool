@@ -16,6 +16,10 @@
     if (self) {
         
         self.backgroundColor = [UIColor whiteColor];
+        _textColor = [UIColor grayColor];
+        _lineColor = [UIColor grayColor];
+        _rectangleColor = [UIColor greenColor];
+        _fontSize = 12;
     }
     return self;
 }
@@ -50,18 +54,35 @@
 
 -(void)drawRectangle:(CGContextRef)ctx topLineY:(CGFloat)topLineY bottomLineY:(CGFloat)bottomLineY rect:(CGRect)rect{
     
-    CGFloat oldrectangX = 0;
+    CGFloat oldrectangX = _isZeroStart == YES ? _firstRectangX : 0;
     //设置笔触颜色
-    CGContextSetFillColorWithColor(ctx, [UIColor greenColor].CGColor);
+    CGContextSetFillColorWithColor(ctx, _rectangleColor.CGColor);
     for (int i = 0; i< _recordSizes.count; i++) {
         NSNumber *recordSize = _recordSizes[i];
         CGFloat size = recordSize.floatValue;
 //        printf("size = %lf \n",size);
+        
         CGFloat h = (rect.size.height - topLineY - bottomLineY) * size;
 //        printf("r = %lf h = %lf \n",rect.size.height,h);
         //画矩形，长宽相等就是正方形
         CGFloat x = oldrectangX;
-        CGFloat y = rect.size.height -  bottomLineY - h;
+        CGFloat y = 0;
+        switch (self.graphicDirect) {
+            case HPRecordGraphicRectDirectTop:{
+                y = topLineY;
+            }
+                break;
+            case HPRecordGraphicRectDirectCentre:{
+                y = (((rect.size.height - topLineY - bottomLineY)/2) + topLineY) - h/2;
+            }
+                break;
+            case HPRecordGraphicRectDirectBottom:{
+                y = rect.size.height -  bottomLineY - h;
+            }
+                break;
+            default:
+                break;
+        }
         CGFloat w = _microsesecondSpace;
         oldrectangX = oldrectangX + w + (_rectangleSpace);
 //        NSLog(@"=> %@,%lf",@(CGRectMake(x,y,w,h)),oldrectangX);
@@ -79,7 +100,7 @@
     
     //画一条简单的线
     //设置笔触颜色
-    CGContextSetStrokeColorWithColor(ctx, [UIColor grayColor].CGColor);//设置颜色有很多方法，我觉得这个方法最好用
+    CGContextSetStrokeColorWithColor(ctx, _lineColor.CGColor);//设置颜色有很多方法，我觉得这个方法最好用
     CGPoint points1[] = {CGPointMake(0, rect.size.height - lineY),CGPointMake(rect.size.width, rect.size.height - lineY)};
     CGContextAddLines(ctx,points1, 2);
     CGContextStrokePath(ctx);
@@ -90,7 +111,7 @@
     
     //画一条简单的线
     //设置笔触颜色
-    CGContextSetStrokeColorWithColor(ctx, [UIColor grayColor].CGColor);//设置颜色有很多方法，我觉得这个方法最好用
+    CGContextSetStrokeColorWithColor(ctx, _lineColor.CGColor);//设置颜色有很多方法，我觉得这个方法最好用
 //    CGContextSetFillColorWithColor(ctx, [UIColor grayColor].CGColor);
     CGPoint points1[] = {CGPointMake(0, lineY),CGPointMake(rect.size.width, lineY)};
     CGContextAddLines(ctx,points1, 2);
@@ -109,6 +130,12 @@
 //    CGContextStrokePath(ctx);
 }
 
+-(CGFloat)textWidthWithFont:(UIFont *)font text:(NSString *)text lineY:(CGFloat)lineY{
+    
+    CGFloat lineW = [self textW:text font:font lineY:lineY];
+    return lineW;
+}
+
 //间距点
 -(void)drawBreakpoint:(CGContextRef)ctx rect:(CGRect)rect lineY:(CGFloat)lineY{
     
@@ -118,15 +145,16 @@
     CGFloat titleH = 20;
     
     //choose a font
-    UIFont *font = [UIFont systemFontOfSize:12];
-    CGFloat lineW = [self textW:@"00:00" font:font lineY:lineY];
+    UIFont *font = [UIFont systemFontOfSize:_fontSize];
+    CGFloat lineW = [self textWidthWithFont:font text:@"00:00" lineY:lineY];
+    
+    
 //
     CGFloat x = 0;
     CGFloat h = titleH;
     CGFloat y = lineY - secondMaxSpeacH - h;
     CGFloat w = lineW;
     NSInteger startpoint = lineW/2;
-
     
     if (_secondMaxSpeac == 0) {
         _secondMaxSpeac = 5;
@@ -146,7 +174,7 @@
         
         NSString *time = [NSString stringWithFormat:@"%02ld:%02ld",minutes,second];
         CGFloat lineW = [self textW:time font:font lineY:lineY];
-        if (i % _secondMaxSpeac == 0) {//大间距
+        if (i % _secondMaxSpeac == 0 || i== _recordMaxSecond) {//大间距
             
             x = startpoint + (i * _secondSpace);
             y = lineY - secondMaxSpeacH;
@@ -198,7 +226,7 @@
     // NSFontAttributeName 字体名称和大小
     [textAttributes setValue:font forKey:NSFontAttributeName];
     // NSForegroundColorAttributeNam 颜色
-    [textAttributes setValue:[UIColor grayColor] forKey:NSForegroundColorAttributeName];
+    [textAttributes setValue:_textColor forKey:NSForegroundColorAttributeName];
     // 绘制文字
     [text drawInRect:rect withAttributes:textAttributes];
 }
@@ -208,6 +236,21 @@
     
     CGSize size = [text sizeWithFont:font constrainedToSize:CGSizeMake(MAXFLOAT, lineY)];
     return size.width;
+}
+
+#pragma mark - 懒加载
+
+-(void)setFontSize:(CGFloat)fontSize{
+    
+    _fontSize = fontSize;
+}
+
+-(void)setIsZeroStart:(BOOL)isZeroStart{
+    
+    _isZeroStart = isZeroStart;
+    UIFont *font = [UIFont systemFontOfSize:_fontSize];
+    CGFloat lineW = [self textWidthWithFont:font text:@"00:00" lineY:_rowTopLineY];
+    _firstRectangX = lineW/2;
 }
 
 @end

@@ -7,14 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HPRecordGraphicBase.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HPRecordGraphicView : UIView
 
 
+@property(nonatomic,assign) HPRecordGraphicRectDirect graphicDirect;
+
 @property(nonatomic,assign) NSInteger recordMaxSecond;//多少秒
 @property(nonatomic,assign) CGFloat secondSpace;//一秒间距
+
+@property(nonatomic,assign) BOOL isZeroStart;
 
 @property(nonatomic,strong) NSString *maxSecondFormat;
 

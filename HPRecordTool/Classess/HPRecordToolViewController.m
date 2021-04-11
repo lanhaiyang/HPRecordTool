@@ -452,7 +452,10 @@
     
     if (_graphicView == nil) {
         _graphicView = [[HPRecordGraphicView alloc] init];
-        _graphicView.recordMaxSecond = 10;
+        _graphicView.graphicDirect = HPRecordGraphicRectDirectBottom;
+        _graphicView.recordMaxSecond = 12;
+        _graphicView.secondSpace = 30;
+        _graphicView.isZeroStart = NO;
         [self setTimeContentWithLeftSecondTime:0 rightSecondTime:_graphicView.recordMaxSecond];
         [_graphicView graphicUpdate];
     }
