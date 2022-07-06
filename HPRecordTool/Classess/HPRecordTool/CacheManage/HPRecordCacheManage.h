@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HPRecordCacheManage : NSObject
 
+@property (nonatomic, strong) NSString *cachePath;
+// 路径的后缀
+@property (nonatomic, strong) NSString *pathExtension;
+
 -(BOOL)hp_removeRecordFile;
 
 -(NSString *)hp_cacheAssistRecordPath;

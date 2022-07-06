@@ -9,48 +9,83 @@
 #import "HPRecordToolManage.h"
 #import <AVFoundation/AVFoundation.h>
 #import "HPRecordCacheManage.h"
-
+#import "AudioAnalyzerTool.h"
 #define HPRecordSpeacTime 0.1
 
-@interface HPRecordToolManage()
+@interface HPRecordToolManage()<HPRecordToolProtocol>
 
-
+@property (nonatomic, strong) AudioAnalyzerTool *analyzerTool;
 @property(nonatomic,strong) AVAudioSession *session;
 @property(nonatomic,strong) AVAudioRecorder *recorder;
 @property(nonatomic,strong) HPRecordCacheManage *cacheManage;
 @property(nonatomic,strong) NSTimer *timeObj;
 
 @property(nonatomic,assign) NSTimeInterval currentTime;
+@property (nonatomic, assign) AVAudioFrameCount frameLength;//每次获取的大小
+
+@property (nonatomic, assign) AVAudioFrameCount bufferSize;
+
+@property (nonatomic, strong) RealtimeConfige *confige;
 
 @end
 
 
 @implementation HPRecordToolManage
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
+
+-(instancetype)initWithConfige:(RealtimeConfige *)confige{
+    
+    if (self = [super init]) {
         
-        [self create];
+        [self createWithConfige:confige];
+        [self connfige];
+        
     }
     return self;
 }
 
--(void)create{
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        
+        [self createWithConfige:RealtimeConfige.confige];
+        [self connfige];
+    }
+    return self;
+}
+
+-(void)connfige{
+    
+//    _bufferSize = 2048;
+//    _frameLength = (AVAudioFrameCount)_bufferSize;
+    
+}
+
+-(void)createWithConfige:(RealtimeConfige *)confige{
+    
+    _confige = confige;
+    
+    _analyzerTool = [[AudioAnalyzerTool alloc] initWithState:HPRecordAnalyzerInput confige:confige];
+    _analyzerTool.delegate = self;
+    _analyzerTool.meteringEnabled = YES;
+    
+    if (_confige.pathExtension.length != 0 && _confige.cachePath.length != 0) {
+        self.cacheManage.cachePath = confige.cachePath;
+        self.cacheManage.pathExtension = confige.pathExtension;
+    }
     
     [self.cacheManage hp_removeMainRecordFile];
     _session = [AVAudioSession sharedInstance];
     NSError *sessionError;
     [_session setCategory:AVAudioSessionCategoryPlayAndRecord error:&sessionError];
     
-    if (_session == nil && [_delegate respondsToSelector:@selector(hp_recordWithState:)]) {
+    if (_session == nil && [_delegate respondsToSelector:@selector(hp_recordWithState:info:)]) {
         _state = HPRecordToolRecordFailse;
-        [_delegate hp_recordWithState:HPRecordToolRecordFailse];
+        [_delegate hp_recordWithState:HPRecordToolRecordFailse info:nil];
     }
     
-
-    
 }
+
 
 -(void)reset{
     
@@ -63,7 +98,6 @@
     if (self.isRecorder == YES && _session == nil) {
         return;
     }
-    
     
     //2.获取文件路径
     NSString *path = @"";
@@ -79,28 +113,29 @@
     
     _recorder = [[AVAudioRecorder alloc] initWithURL:cachePathURL settings:[self configeInfo] error:nil];
     
-    if (_recorder == nil && [_delegate respondsToSelector:@selector(hp_recordWithState:)]) {
+    if (_recorder == nil && [_delegate respondsToSelector:@selector(hp_recordWithState:info:)]) {
         _state = HPRecordToolRecordFailse;
         //音频格式和文件存储格式不匹配,无法初始化Recorder
-        [_delegate hp_recordWithState:HPRecordToolRecordFailse];
+        [_delegate hp_recordWithState:HPRecordToolRecordFailse info:nil];
         return;
-    }else if ([_delegate respondsToSelector:@selector(hp_recordWithState:)]){
+    }else if ([_delegate respondsToSelector:@selector(hp_recordWithState:info:)]){
         
         _state = HPRecordToolRecordSuccess;
         //成功
-        [_delegate hp_recordWithState:HPRecordToolRecordSuccess];
+        [_delegate hp_recordWithState:HPRecordToolRecordSuccess info:nil];
     }
     
     _recorder.meteringEnabled = YES;
     [_recorder prepareToRecord];
     [_recorder record];
     
-    if ([_delegate respondsToSelector:@selector(hp_recordWithState:)]) {
+    if ([_delegate respondsToSelector:@selector(hp_recordWithState:info:)]) {
         _state = HPRecordToolRecordStart;
-        [_delegate hp_recordWithState:HPRecordToolRecordStart];
+        [_delegate hp_recordWithState:HPRecordToolRecordStart info:nil];
     }
     
     [self.timeObj setFireDate:[NSDate distantPast]];
+    [_analyzerTool startAudioEngine];
 }
 
 -(void)stopRecord{
@@ -109,16 +144,16 @@
         [_recorder stop];
     }
     
-//    _currentTime = 0;
+    //    _currentTime = 0;
     
     [self.session setCategory:AVAudioSessionCategoryPlayback error:nil];
-    if ([_delegate respondsToSelector:@selector(hp_recordWithState:)]) {
+    if ([_delegate respondsToSelector:@selector(hp_recordWithState:info:)]) {
         _state = HPRecordToolRecordStop;
-        [_delegate hp_recordWithState:HPRecordToolRecordStop];
+        [_delegate hp_recordWithState:HPRecordToolRecordStop info:nil];
     }
-     [self.timeObj setFireDate:[NSDate distantFuture]];//暂停计时器
+    [self.timeObj setFireDate:[NSDate distantFuture]];//暂停计时器
     [self composeRecord];
-    
+    [_analyzerTool closeAudioEngine];
 }
 
 -(void)pauseRecord{
@@ -128,12 +163,13 @@
     }
     
     [_recorder stop];
-    if ([_delegate respondsToSelector:@selector(hp_recordWithState:)]) {
+    if ([_delegate respondsToSelector:@selector(hp_recordWithState:info:)]) {
         _state = HPRecordToolRecordPause;
-        [_delegate hp_recordWithState:HPRecordToolRecordPause];
+        [_delegate hp_recordWithState:HPRecordToolRecordPause info:nil];
     }
      [self.timeObj setFireDate:[NSDate distantFuture]];//暂停计时器
     [self composeRecord];
+    [_analyzerTool pauseAudioEngine];
 }
 
 -(void)composeRecord{
@@ -169,6 +205,13 @@
     return level;
 }
 
+- (float)analyzerVoiceSize{
+    
+    float decibels = [_analyzerTool peakPowerForChannel:0];
+    float level = decibels * 2;
+    return level;
+}
+
 - (float)voiceSizeDB{
 
     float db = [self voiceSize] * 120;//0-120
@@ -192,8 +235,8 @@
     if ([_cacheManage hp_isExistFileWithFilePath:fromPath] == NO ||
         [_cacheManage hp_isExistFileWithFilePath:toPath] == NO) {
         
-        if ([self.delegate respondsToSelector:@selector(hp_recordWithState:)]) {
-            [self.delegate hp_recordWithState:HPRecordToolRecordCompoundSuccess];
+        if ([self.delegate respondsToSelector:@selector(hp_recordWithState:info:)]) {
+            [self.delegate hp_recordWithState:HPRecordToolRecordCompoundSuccess info:nil];
         }
         return;
     }
@@ -250,8 +293,8 @@
 //                  NSLog(@"导出成功，路径是：%@", outputPath);
                    dispatch_async(dispatch_get_main_queue(), ^{
                        
-                       if ([weakSelf.delegate respondsToSelector:@selector(hp_recordWithState:)]) {
-                           [weakSelf.delegate hp_recordWithState:HPRecordToolRecordCompoundSuccess];
+                       if ([weakSelf.delegate respondsToSelector:@selector(hp_recordWithState:info:)]) {
+                           [weakSelf.delegate hp_recordWithState:HPRecordToolRecordCompoundSuccess info:nil];
                        }
                    });
                }
@@ -260,8 +303,8 @@
                    
                    dispatch_async(dispatch_get_main_queue(), ^{
                        
-                       if ([weakSelf.delegate respondsToSelector:@selector(hp_recordWithState:)]) {
-                           [weakSelf.delegate hp_recordWithState:HPRecordToolRecordCompoundFailse];
+                       if ([weakSelf.delegate respondsToSelector:@selector(hp_recordWithState:info:)]) {
+                           [weakSelf.delegate hp_recordWithState:HPRecordToolRecordCompoundFailse info:nil];
                        }
                    });
                }
@@ -270,8 +313,8 @@
                    
                    dispatch_async(dispatch_get_main_queue(), ^{
                        
-                       if ([weakSelf.delegate respondsToSelector:@selector(hp_recordWithState:)]) {
-                           [weakSelf.delegate hp_recordWithState:HPRecordToolRecordCompoundFailse];
+                       if ([weakSelf.delegate respondsToSelector:@selector(hp_recordWithState:info:)]) {
+                           [weakSelf.delegate hp_recordWithState:HPRecordToolRecordCompoundFailse info:nil];
                        }
                    });
                }
@@ -319,10 +362,36 @@
 -(void)updateProgress{
     
     _currentTime = _currentTime + HPRecordSpeacTime;
-    if ([_delegate respondsToSelector:@selector(hp_recordWithState:)]) {
+    if ([_delegate respondsToSelector:@selector(hp_recordWithState:info:)]) {
         _state = HPRecordToolProgressChange;
-        [_delegate hp_recordWithState:HPRecordToolProgressChange];
+        
+//        if (_recorder.format.magicCookie == nil) {
+            [_delegate hp_recordWithState:HPRecordToolProgressChange info:nil];
+//            return;
+//        }
+//        AVAudioPCMBuffer *pcmBuffer = [[AVAudioPCMBuffer alloc] initWithPCMFormat:_recorder.format frameCapacity:_frameLength];
+//        pcmBuffer.frameLength = _frameLength;
+        
+        // AVAudioFormat -> AVAudioPCMBuffer
+
+//        [_delegate hp_recordWithState:HPRecordToolProgressChange info:@{@"pcmBuffer":pcmBuffer}];
     }
+}
+
+#pragma mark - HPRecordToolProtocol
+
+- (void)hp_recorderDidGenerateSpectrumWithDatas:(NSArray *)spectrums{
+    
+    if (spectrums == nil) {
+        return;
+    }
+    if ([self.delegate respondsToSelector:@selector(hp_recorderDidGenerateSpectrumWithDatas:)]) {
+        [self.delegate hp_recorderDidGenerateSpectrumWithDatas:spectrums];
+    }
+}
+
+-(void)hp_recordWithState:(HPRecordToolRecordState)state info:(NSDictionary  * _Nullable )info{
+    
 }
 
 #pragma mark - 懒加载
@@ -350,13 +419,13 @@
     //设置参数
     NSDictionary *recordSetting = [[NSDictionary alloc] initWithObjectsAndKeys:
                                    //采样率  8000/11025/22050/44100/96000（影响音频的质量）
-                                   [NSNumber numberWithFloat: 8000.0],AVSampleRateKey,
+                                   [NSNumber numberWithFloat: (self.confige.samplingRate == 0?8000:self.confige.samplingRate)],AVSampleRateKey,
                                    // 音频格式
-                                   [NSNumber numberWithInt: kAudioFormatLinearPCM],AVFormatIDKey,
+                                   (self.confige.audioFormat == nil?[NSNumber numberWithInt: kAudioFormatMPEG4AAC]:self.confige.audioFormat),AVFormatIDKey,
                                    //采样位数  8、16、24、32 默认为16
-                                   [NSNumber numberWithInt:16],AVLinearPCMBitDepthKey,
+                                   [NSNumber numberWithInt:32],AVLinearPCMIsFloatKey,
                                    // 音频通道数 1 或 2
-                                   [NSNumber numberWithInt: 1], AVNumberOfChannelsKey,
+                                   [NSNumber numberWithInt: (self.confige.channel == 0?1:self.confige.channel)], AVNumberOfChannelsKey,
                                    //录音质量
                                    [NSNumber numberWithInt:AVAudioQualityHigh],AVEncoderAudioQualityKey,
                                    nil];

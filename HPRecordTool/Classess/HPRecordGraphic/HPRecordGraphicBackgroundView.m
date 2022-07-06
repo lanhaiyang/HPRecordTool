@@ -24,6 +24,11 @@
     return self;
 }
 
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    
+}
+
 -(void)hp_updateDisplay{
     
     [self setNeedsDisplay];

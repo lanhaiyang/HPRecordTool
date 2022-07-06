@@ -67,7 +67,7 @@
     [self.view addSubview:self.graphicView];
     [_graphicView mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.equalTo(self.view).equalTo(@20);
+        make.top.equalTo(self.view).equalTo(@(20 + 64));
         make.right.left.equalTo(self.view);
         make.height.equalTo(@200);
     }];
@@ -110,7 +110,7 @@
 
 #pragma mark - HPRecordPalyerToolDelegate
 
--(void)hp_recordPlayerState:(HPRecordPalyerToolState)state{
+-(void)hp_recordPlayerState:(HPRecordPalyerToolState)state info:(NSDictionary * _Nullable)info{
     
     switch (state) {
         case HPRecordPalyerToolStop:{
@@ -170,7 +170,7 @@
 
 #pragma mark - HPRecordToolProtocol
 
--(void)hp_recordWithState:(HPRecordToolRecordState)state{
+-(void)hp_recordWithState:(HPRecordToolRecordState)state info:(NSDictionary * _Nullable)info{
     
     switch (state) {
         case HPRecordToolProgressChange:{

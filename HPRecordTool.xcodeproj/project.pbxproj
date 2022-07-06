@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33A877EB2864593E00AFC330 /* RealtimeConfige.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A877EA2864593D00AFC330 /* RealtimeConfige.m */; };
+		33A9768028630163005C2FC7 /* Kuba Oms - My Love.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 33A9767F28630163005C2FC7 /* Kuba Oms - My Love.mp3 */; };
+		33A976882863133A005C2FC7 /* RealtimeAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A976862863133A005C2FC7 /* RealtimeAnalyzer.m */; };
+		33A9768C28631BE2005C2FC7 /* AudioAnalyzerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A9768B28631BE2005C2FC7 /* AudioAnalyzerTool.m */; };
+		33B11FB928619DCC0001C352 /* RecordTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B11FB728619DCC0001C352 /* RecordTestViewController.m */; };
+		33B11FBA28619DCC0001C352 /* RecordShowSizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B11FB828619DCC0001C352 /* RecordShowSizeViewController.m */; };
+		33B11FBD28619DDF0001C352 /* HPSymmetryFrequencySpectrumGraphicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B11FBB28619DDE0001C352 /* HPSymmetryFrequencySpectrumGraphicView.m */; };
+		33B11FC028619EC60001C352 /* 327434560.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 33B11FBF28619EC60001C352 /* 327434560.mp3 */; };
+		33C005D92872CA8900732434 /* HPFrequencySpectrumGraphicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C005D82872CA8900732434 /* HPFrequencySpectrumGraphicView.m */; };
 		4F278320A65834BC4EC4A3E8 /* Pods_HPRecordTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8ED280714A2BC4ACFAD56B9 /* Pods_HPRecordTool.framework */; };
 		651B43DD253FD20300A3968B /* HPRecordPalyerToolManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 651B43DC253FD20300A3968B /* HPRecordPalyerToolManage.m */; };
 		651B43E0253FD8DB00A3968B /* HPRecordGraphicBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 651B43DF253FD8DB00A3968B /* HPRecordGraphicBackgroundView.m */; };
@@ -47,6 +56,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		33A877E92864593D00AFC330 /* RealtimeConfige.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealtimeConfige.h; sourceTree = "<group>"; };
+		33A877EA2864593D00AFC330 /* RealtimeConfige.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealtimeConfige.m; sourceTree = "<group>"; };
+		33A9767F28630163005C2FC7 /* Kuba Oms - My Love.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Kuba Oms - My Love.mp3"; sourceTree = "<group>"; };
+		33A976862863133A005C2FC7 /* RealtimeAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealtimeAnalyzer.m; sourceTree = "<group>"; };
+		33A976872863133A005C2FC7 /* RealtimeAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealtimeAnalyzer.h; sourceTree = "<group>"; };
+		33A9768A28631BE2005C2FC7 /* AudioAnalyzerTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioAnalyzerTool.h; sourceTree = "<group>"; };
+		33A9768B28631BE2005C2FC7 /* AudioAnalyzerTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioAnalyzerTool.m; sourceTree = "<group>"; };
+		33B11FB528619DCC0001C352 /* RecordTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordTestViewController.h; sourceTree = "<group>"; };
+		33B11FB628619DCC0001C352 /* RecordShowSizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordShowSizeViewController.h; sourceTree = "<group>"; };
+		33B11FB728619DCC0001C352 /* RecordTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordTestViewController.m; sourceTree = "<group>"; };
+		33B11FB828619DCC0001C352 /* RecordShowSizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordShowSizeViewController.m; sourceTree = "<group>"; };
+		33B11FBB28619DDE0001C352 /* HPSymmetryFrequencySpectrumGraphicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPSymmetryFrequencySpectrumGraphicView.m; sourceTree = "<group>"; };
+		33B11FBC28619DDF0001C352 /* HPSymmetryFrequencySpectrumGraphicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPSymmetryFrequencySpectrumGraphicView.h; sourceTree = "<group>"; };
+		33B11FBF28619EC60001C352 /* 327434560.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 327434560.mp3; sourceTree = "<group>"; };
+		33C005D72872CA8900732434 /* HPFrequencySpectrumGraphicView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPFrequencySpectrumGraphicView.h; sourceTree = "<group>"; };
+		33C005D82872CA8900732434 /* HPFrequencySpectrumGraphicView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPFrequencySpectrumGraphicView.m; sourceTree = "<group>"; };
 		6511846626231E810046075A /* HPRecordGraphicBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRecordGraphicBase.h; sourceTree = "<group>"; };
 		651B43DB253FD20300A3968B /* HPRecordPalyerToolManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPRecordPalyerToolManage.h; sourceTree = "<group>"; };
 		651B43DC253FD20300A3968B /* HPRecordPalyerToolManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPRecordPalyerToolManage.m; sourceTree = "<group>"; };
@@ -118,6 +143,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33A976852863133A005C2FC7 /* RealtimeAnalyzer */ = {
+			isa = PBXGroup;
+			children = (
+				33A976862863133A005C2FC7 /* RealtimeAnalyzer.m */,
+				33A976872863133A005C2FC7 /* RealtimeAnalyzer.h */,
+				33A877E92864593D00AFC330 /* RealtimeConfige.h */,
+				33A877EA2864593D00AFC330 /* RealtimeConfige.m */,
+			);
+			path = RealtimeAnalyzer;
+			sourceTree = "<group>";
+		};
+		33A9768928631B0D005C2FC7 /* AudioAnalyzerTool */ = {
+			isa = PBXGroup;
+			children = (
+				33A9768A28631BE2005C2FC7 /* AudioAnalyzerTool.h */,
+				33A9768B28631BE2005C2FC7 /* AudioAnalyzerTool.m */,
+			);
+			path = AudioAnalyzerTool;
+			sourceTree = "<group>";
+		};
+		33A9768D28631BF7005C2FC7 /* Confige */ = {
+			isa = PBXGroup;
+			children = (
+				6511846626231E810046075A /* HPRecordGraphicBase.h */,
+				6552C03C2536E62D007C4168 /* HPRecordToolProtocol.h */,
+			);
+			path = Confige;
+			sourceTree = "<group>";
+		};
+		33B11FBE28619EC50001C352 /* TestResource */ = {
+			isa = PBXGroup;
+			children = (
+				33B11FBF28619EC60001C352 /* 327434560.mp3 */,
+				33A9767F28630163005C2FC7 /* Kuba Oms - My Love.mp3 */,
+			);
+			path = TestResource;
+			sourceTree = "<group>";
+		};
 		651B43DA253FD1DF00A3968B /* HPRecordPalyerTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,9 +215,14 @@
 		6552C00125369F9B007C4168 /* HPRecordTool */ = {
 			isa = PBXGroup;
 			children = (
+				33B11FBE28619EC50001C352 /* TestResource */,
 				6552C0372536A0C4007C4168 /* Classess */,
 				6552C00225369F9B007C4168 /* AppDelegate.h */,
 				6552C00325369F9B007C4168 /* AppDelegate.m */,
+				33B11FB628619DCC0001C352 /* RecordShowSizeViewController.h */,
+				33B11FB828619DCC0001C352 /* RecordShowSizeViewController.m */,
+				33B11FB528619DCC0001C352 /* RecordTestViewController.h */,
+				33B11FB728619DCC0001C352 /* RecordTestViewController.m */,
 				6552C00525369F9B007C4168 /* SceneDelegate.h */,
 				6552C00625369F9B007C4168 /* SceneDelegate.m */,
 				6552C00825369F9B007C4168 /* ViewController.h */,
@@ -189,6 +257,9 @@
 		6552C0372536A0C4007C4168 /* Classess */ = {
 			isa = PBXGroup;
 			children = (
+				33A9768D28631BF7005C2FC7 /* Confige */,
+				33A9768928631B0D005C2FC7 /* AudioAnalyzerTool */,
+				33A976852863133A005C2FC7 /* RealtimeAnalyzer */,
 				659227192611FF2B00BA67C2 /* HPRepetitionActionButton */,
 				651B43DA253FD1DF00A3968B /* HPRecordPalyerTool */,
 				65F7DD86253D392500A2B711 /* HPRecordGraphic */,
@@ -207,7 +278,6 @@
 				6552C03D2536E74F007C4168 /* CacheManage */,
 				6552C0392536A127007C4168 /* HPRecordToolManage.h */,
 				6552C03A2536A127007C4168 /* HPRecordToolManage.m */,
-				6552C03C2536E62D007C4168 /* HPRecordToolProtocol.h */,
 			);
 			path = HPRecordTool;
 			sourceTree = "<group>";
@@ -233,9 +303,12 @@
 		65F7DD86253D392500A2B711 /* HPRecordGraphic */ = {
 			isa = PBXGroup;
 			children = (
-				6511846626231E810046075A /* HPRecordGraphicBase.h */,
 				65F7DD87253D3E7800A2B711 /* HPRecordGraphicView.h */,
 				65F7DD88253D3E7800A2B711 /* HPRecordGraphicView.m */,
+				33C005D72872CA8900732434 /* HPFrequencySpectrumGraphicView.h */,
+				33C005D82872CA8900732434 /* HPFrequencySpectrumGraphicView.m */,
+				33B11FBC28619DDF0001C352 /* HPSymmetryFrequencySpectrumGraphicView.h */,
+				33B11FBB28619DDE0001C352 /* HPSymmetryFrequencySpectrumGraphicView.m */,
 				651B43DE253FD8DB00A3968B /* HPRecordGraphicBackgroundView.h */,
 				651B43DF253FD8DB00A3968B /* HPRecordGraphicBackgroundView.m */,
 				65F7DD8A253D425E00A2B711 /* HPRecordTimeAxleView.h */,
@@ -332,6 +405,7 @@
 				TargetAttributes = {
 					6552BFFE25369F9B007C4168 = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1300;
 					};
 					6552C01925369F9D007C4168 = {
 						CreatedOnToolsVersion = 11.1;
@@ -369,7 +443,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6552C01225369F9D007C4168 /* LaunchScreen.storyboard in Resources */,
+				33B11FC028619EC60001C352 /* 327434560.mp3 in Resources */,
 				6552C00F25369F9D007C4168 /* Assets.xcassets in Resources */,
+				33A9768028630163005C2FC7 /* Kuba Oms - My Love.mp3 in Resources */,
 				6552C00D25369F9B007C4168 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,18 +514,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				6552C00A25369F9B007C4168 /* ViewController.m in Sources */,
+				33C005D92872CA8900732434 /* HPFrequencySpectrumGraphicView.m in Sources */,
 				6552C03B2536A127007C4168 /* HPRecordToolManage.m in Sources */,
 				6552C0402536E779007C4168 /* HPRecordCacheManage.m in Sources */,
+				33B11FB928619DCC0001C352 /* RecordTestViewController.m in Sources */,
 				6552C00425369F9B007C4168 /* AppDelegate.m in Sources */,
+				33A9768C28631BE2005C2FC7 /* AudioAnalyzerTool.m in Sources */,
 				65F7DD8F253D437700A2B711 /* HPRecordGraphicViewModel.m in Sources */,
 				65F7DD8C253D425E00A2B711 /* HPRecordTimeAxleView.m in Sources */,
 				6592271C2611FFA800BA67C2 /* HPRepetitionActionButton.m in Sources */,
 				65F7DD89253D3E7800A2B711 /* HPRecordGraphicView.m in Sources */,
+				33A877EB2864593E00AFC330 /* RealtimeConfige.m in Sources */,
 				6595DC3C254BC60900BDEC01 /* HPRecordToolViewModel.m in Sources */,
+				33B11FBA28619DCC0001C352 /* RecordShowSizeViewController.m in Sources */,
 				651B44292540490E00A3968B /* HPRecordToolViewController.m in Sources */,
+				33A976882863133A005C2FC7 /* RealtimeAnalyzer.m in Sources */,
 				6552C01525369F9D007C4168 /* main.m in Sources */,
 				651B43DD253FD20300A3968B /* HPRecordPalyerToolManage.m in Sources */,
 				651B43E0253FD8DB00A3968B /* HPRecordGraphicBackgroundView.m in Sources */,
+				33B11FBD28619DDF0001C352 /* HPSymmetryFrequencySpectrumGraphicView.m in Sources */,
 				6552C00725369F9B007C4168 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,15 +703,20 @@
 			baseConfigurationReference = D9D97C1F1318C01B607054E5 /* Pods-HPRecordTool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46NEYMBVT5;
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = 6JXWDA9ABA;
 				INFOPLIST_FILE = HPRecordTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HPRecordTool2;
+				PRODUCT_BUNDLE_IDENTIFIER = hepeng.test.HPRecordTool2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/HPRecordTool/Classess/RealtimeAnalyzer/HPRecordTool-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -638,15 +726,19 @@
 			baseConfigurationReference = BE30F13531BDCFA12B8F2CFC /* Pods-HPRecordTool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 52293RKLWK;
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = 6JXWDA9ABA;
 				INFOPLIST_FILE = HPRecordTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HPRecordTool;
+				PRODUCT_BUNDLE_IDENTIFIER = hepeng.test.HPRecordTool2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/HPRecordTool/Classess/RealtimeAnalyzer/HPRecordTool-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -5,6 +5,7 @@
 //  Created by 何鹏 on 2020/10/19.
 //  Copyright © 2020 何鹏. All rights reserved.
 //
+//  具体可以去更新: https://github.com/lanhaiyang/HPRecordTool
 
 #import <UIKit/UIKit.h>
 #import "HPRecordGraphicBase.h"

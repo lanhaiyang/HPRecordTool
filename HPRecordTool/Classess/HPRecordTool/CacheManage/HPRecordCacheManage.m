@@ -50,7 +50,14 @@
     
     //1.获取沙盒地址
     NSString *path = [self hp_cacheRecordBasePath];
-    NSString *filePath = [NSString stringWithFormat:@"%@/record1.caf",path];
+    NSString *filePath = nil;
+    if (self.cachePath.length != 0 && self.pathExtension.length != 0) {
+        
+        filePath = [NSString stringWithFormat:@"%@/record1.%@",path,self.pathExtension];
+    }else{
+        
+        filePath = [NSString stringWithFormat:@"%@/record1.m4a",path];
+    }
 
     return filePath;
 }
@@ -63,10 +70,18 @@
 
 
 -(NSString *)hp_cacheMainRecordPath{
-    //1.获取沙盒地址
-    NSString *path = [self hp_cacheRecordBasePath];
-    NSString *filePath = [NSString stringWithFormat:@"%@/record.caf",path];
-    return filePath;
+
+    
+    if (_cachePath.length != 0 && _pathExtension.length != 0) {
+        
+        return _cachePath;
+    }else{
+        
+        //1.获取沙盒地址
+        NSString *path = [self hp_cacheRecordBasePath];
+        NSString *filePath = [NSString stringWithFormat:@"%@/record.m4a",path];
+        return filePath;
+    }
 }
 
 -(BOOL)hp_isExistCacheMainRecordPath{
